@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.masked-overflow {
+    --mask-height: 32px;
+    --mask-size-content: 100%;
+    --mask-image-content: linear-gradient(
+        to bottom,
+        black calc(100% - var(--mask-height)),
+        transparent
+    );
+    padding-bottom: var(--mask-height);
+    mask-image: var(--mask-image-content);
+    mask-size: var(--mask-size-content);
+    mask-position: 0 0, 100% 0;
+    mask-repeat: no-repeat, no-repeat;
+}
