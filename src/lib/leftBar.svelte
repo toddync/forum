@@ -1,13 +1,11 @@
 <script>
+    import Tag from "./Tag.svelte";
+
 </script>
 
-<div
-	class="w-full md:w-52 flex flex-col gap-3 pr-1 pl-1 md:pr-0 overflow-hidden"
->
-	<div class="rounded-2xl bg-dark-3 p-3 text-xs w-full">
-		<div
-			class="flex flex-row md:flex-col gap-3 md:grid grid-cols-3 md:grid-cols-1"
-		>
+<div class="w-full md:min-w-52 lg:max-w-52 grid md:grid-cols-3 lg:flex lg:flex-col gap-3 overflow-hidden">
+	<div class="rounded-2xl bg-dark-3 p-3 text-xs w-full md:max-h-48 overflow-y-scroll">
+		<div class="flex flex-row md:flex-col gap-3 md:grid grid-cols-3 md:grid-cols-1">
 			{#each [1, 1, 1] as item}
 				<div class="rounded-md bg-dark-3 my-auto mx-auto md:mx-0 h-max">
 					<div class="flex gap-1.5">
@@ -20,29 +18,19 @@
 											src="/public/star-1.svg"
 											alt=""
 										/>
-										<b
-											class="absolute top-1/2 left-1/4 -translate-y-1/3 -translate-x-[0.03rem]"
-										>
-											New
-										</b>
+										<b class="absolute top-1/2 left-1/4 -translate-y-1/3 -translate-x-[0.03rem]">New</b>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="gap-1 my-auto">
-							<div
-								class="font-semibold text-base pt-1.5 md:hidden"
-							>
+							<div class="font-semibold text-base pt-1.5 md:hidden">
 								Newest
 							</div>
-							<div
-								class="font-semibold text-base hidden md:block"
-							>
+							<div class="font-semibold text-base hidden md:block">
 								Newest and Recent
 							</div>
-							<div
-								class="hidden md:block relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 min-w-[5.125rem]"
-							>
+							<div class="hidden md:block text-4xs text-secondary-color-secondary-3">
 								Find the latest update
 							</div>
 						</div>
@@ -131,324 +119,40 @@
 			</div>
 		</div>
 	</div>
-	<div class="hidden md:fle flex-col gap-3">
-		<div
-			class="self-stretch rounded-2xl bg-dark-3 flex flex-row items-start justify-start py-[1.25rem] pl-[1.25rem] pr-[0.937rem]"
-		>
-			<div
-				class="flex-1 flex flex-col items-start justify-start gap-[1.25rem]"
-			>
-				<div class="flex flex-row items-end justify-start">
-					<h2
-						class="m-0 relative text-inherit leading-[1.5rem] font-semibold font-[inherit] inline-block min-w-[5.563rem]"
-					>
-						Popular Tags
-					</h2>
+
+	<div class="hidden md:grid grid-cols-2 lg:flex lg:flex-col gap-3 h-fit md:*:max-h-44 md:*:overflow-y-scroll lg:*:max-h-none md:*:pb-5 col-span-2 w-full">
+		<div class="rounded-2xl bg-dark-3 flex py-5 pl-5 pr-4">
+			<div class="flex flex-col gap-3">
+				<div class="flex gap-1">
+					<p class="font-semibold size-fit my-auto">Popular Tags</p>
 				</div>
-				<div
-					class="self-stretch flex flex-col items-start justify-start gap-[0.625rem] text-[0.75rem]"
-				>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-dimgray-200 flex flex-row items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-								src="/public/dev.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[3.563rem]"
-							>
-								#javascript
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3 inline-block min-w-[6.438rem]"
-							>
-								82,645 Posted by this tag
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-darkslategray-400 flex flex-col items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="w-[1.25rem] h-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-								src="/public/bitcoin.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.625rem]"
-							>
-								#bitcoin
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3 inline-block min-w-[6.438rem]"
-							>
-								65,523 Posted • Trending
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-darkslategray-100 flex flex-row items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-								src="/public/design.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.563rem]"
-							>
-								#design
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3"
-							>
-								51,354 • Trending in Bangladesh
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-dimgray-300 flex flex-row items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-								src="/public/blogging.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[3.875rem]"
-							>
-								#innovation
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3 inline-block min-w-[6.438rem]"
-							>
-								48,029 Posted by this tag
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-darkslategray-300 flex flex-row items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-								src="/public/tutorial.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.813rem]"
-							>
-								#tutorial
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3"
-							>
-								51,354 • Trending in Bangladesh
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="rounded bg-darkslategray-200 flex flex-row items-start justify-start p-[0.375rem]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								alt=""
-								src="/public/seo.svg"
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[3.625rem]"
-							>
-								#busieness
-							</div>
-							<div
-								class="relative text-[0.625rem] leading-[1rem] text-secondary-color-secondary-3 inline-block min-w-[6.438rem]"
-							>
-								82,645 Posted by this tag
-							</div>
-						</div>
-					</div>
-				</div>
+
+				<Tag />
+				<Tag />
+				<Tag />
+				<Tag />
+				<div class="min-h-px"/>
 			</div>
 		</div>
-		<div
-			class="self-stretch rounded-2xl bg-dark-3 flex flex-row items-start justify-start py-[1.25rem] pl-[1.25rem] pr-[1.75rem]"
-		>
-			<div
-				class="flex-1 flex flex-col items-start justify-start gap-[1.25rem]"
-			>
-				<div class="flex flex-row items-end justify-start">
-					<div
-						class="flex flex-row items-end justify-start gap-[0.187rem]"
-					>
-						<h2
-							class="m-0 relative text-inherit leading-[1.5rem] font-semibold font-[inherit] inline-block min-w-[5.938rem]"
-						>
-							Pinned Group
-						</h2>
-						<img
-							class="h-[1.25rem] w-[1.25rem] relative"
-							alt=""
-							src="/public/vector-17.svg"
-						/>
-					</div>
+		
+		<div class="rounded-2xl bg-dark-3 flex py-5 pl-5 pr-7">
+			<div class="flex flex-col gap-3">
+				<div class="flex gap-1">
+					<p class="font-semibold size-fit my-auto">Pinned Group</p>
+					<img
+						class="size-5 my-auto"
+						src="/public/vector-17.svg"
+						alt=""
+					/>
 				</div>
-				<div
-					class="self-stretch flex flex-col items-start justify-start gap-[0.625rem] text-[0.75rem]"
-				>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<img
-							class="h-[2rem] w-[2rem] rounded object-cover min-h-[2rem]"
-							loading="lazy"
-							alt=""
-							src="/public/icon-1@2x.png"
-						/>
 
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[3.563rem]"
-							>
-								#javascript
-							</div>
-							<div
-								class="relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 inline-block min-w-[5.813rem]"
-							>
-								82,645 Posted by this tag
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<img
-							class="h-[2rem] w-[2rem] rounded object-cover min-h-[2rem]"
-							loading="lazy"
-							alt=""
-							src="/public/icon-2@2x.png"
-						/>
-
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.625rem]"
-							>
-								#bitcoin
-							</div>
-							<div
-								class="relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 inline-block min-w-[5.75rem]"
-							>
-								65,523 Posted • Trending
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<div
-							class="w-[2rem] rounded flex flex-row items-start justify-start py-[0.25rem] px-[0.312rem] box-border bg-[url('/public/icon1@3x.png')] bg-cover bg-no-repeat bg-[top]"
-						>
-							<img
-								class="h-[1.25rem] w-[1.25rem] relative"
-								loading="lazy"
-								alt=""
-							/>
-						</div>
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.563rem]"
-							>
-								#design
-							</div>
-							<div
-								class="relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 inline-block min-w-[7.5rem]"
-							>
-								51,354 • Trending in Bangladesh
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<img
-							class="h-[2rem] w-[2rem] rounded object-cover min-h-[2rem]"
-							loading="lazy"
-							alt=""
-							src="/public/icon-3@2x.png"
-						/>
-
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[3.25rem]"
-							>
-								#blogging
-							</div>
-							<div
-								class="relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 inline-block min-w-[5.813rem]"
-							>
-								48,029 Posted by this tag
-							</div>
-						</div>
-					</div>
-					<div
-						class="flex flex-row items-start justify-start gap-[0.625rem]"
-					>
-						<img
-							class="h-[2rem] w-[2rem] rounded object-cover min-h-[2rem]"
-							loading="lazy"
-							alt=""
-							src="/public/icon-4@2x.png"
-						/>
-
-						<div class="flex flex-col items-start justify-start">
-							<div
-								class="relative leading-[1.125rem] font-semibold inline-block min-w-[2.813rem]"
-							>
-								#tutorial
-							</div>
-							<div
-								class="relative text-[0.563rem] leading-[0.875rem] text-secondary-color-secondary-3 inline-block min-w-[7.5rem]"
-							>
-								51,354 • Trending in Bangladesh
-							</div>
-						</div>
-					</div>
-				</div>
+				<Tag />
+				<Tag />
+				<Tag />
+				<Tag />
+				<Tag />
+				<Tag />
+				<div class="min-h-px"/>
 			</div>
 		</div>
 	</div>

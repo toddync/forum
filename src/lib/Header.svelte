@@ -1,96 +1,28 @@
 <script>
+	import Account from "./Account.svelte";
 	import NavContainer from "./navContainer.svelte";
+	import SearchBar from "./SearchBar.svelte";
 </script>
 
-<header
-	class="w-svw bg-dark-3 flex flex-col items-start justify-start py-[1.25rem] box-border text-left text-[1.625rem] text-red-red-90 font-regular-10"
->
-	<div class="flex flex-row items-center box-border gap-5 w-full">
-		<div class="flex flex-row items-center gap-1 pl-5">
-			<div
-				class="rounded-md bg-secondary-color-background-2 flex flex-col items-start justify-start p-[0.25rem] hidden"
-			>
+<header class="w-svw bg-dark-3 flex gap-5 py-5 text-7xl text-tomato font-regular-10">
+		<div class="flex gap-1 pl-5 size-fit my-auto">
+			<div class="rounded-md bg-secondary-color-background-2 p-1 hidden -flex">
 				<img
-					class="w-[1.375rem] h-[1.375rem] relative"
-					loading="lazy"
-					alt=""
+					class="size-5"
 					src="/public/icon.svg"
+					alt=""
 				/>
 			</div>
-			<a class="[text-decoration:none] relative font-bold text-[inherit]">
-				ForumTERJ
-			</a>
+			<p class="font-bold">ForumTERJ</p>
 		</div>
-		<div
-			class="w-full flex flex-row text-sm text-secondary-color-secondary-4"
-		>
-			<div class="hidden md:block">
+		
+		<div class="w-full flex text-sm text-secondary-color-secondary-4">
+			<div class="hidden lg:block">
 				<NavContainer />
 			</div>
-			<div class="flex items-center justify-end gap-3 w-full">
-				<div
-					class="flex-1 rounded-lg bg-dark-4 flex flex-col items-start justify-start py-[0.562rem] px-[1.25rem] box-border max-w-full"
-				>
-					<div
-						class="self-stretch flex flex-row items-center justify-between gap-[1.25rem]"
-					>
-						<a
-							class="[text-decoration:none] w-[8.75rem] relative leading-[1.375rem] text-[inherit] inline-block shrink-0 whitespace-nowrap"
-							>Type here to search...</a
-						>
-						<img
-							class="h-[1.25rem] w-[1.25rem] relative"
-							alt=""
-							src="/public/search-icon.svg"
-						/>
-					</div>
-				</div>
-				<div
-					class="flex flex-row text-secondary-color-background-2 mr-10 gap-2"
-				>
-					<div
-						class="rounded-6xs bg-dark-4 flex flex-row items-start justify-start p-[0.625rem]"
-					>
-						<img
-							class="h-[1.25rem] w-[1.25rem] relative overflow-hidden shrink-0"
-							alt=""
-							src="/public/message.svg"
-						/>
-					</div>
-					<div
-						class="rounded-6xs bg-dark-4 flex flex-row items-start justify-start p-[0.625rem]"
-					>
-						<img
-							class="h-[1.25rem] w-[1.25rem] relative overflow-hidden shrink-0"
-							alt=""
-							src="/public/notification.svg"
-						/>
-					</div>
-
-					<div class="flex flex-row gap-[0.625rem]">
-						<div
-							class="flex flex-row items-center justify-start gap-1"
-						>
-							<img
-								class="h-[2.5rem] w-[2.5rem] relative object-cover"
-								loading="lazy"
-								alt=""
-								src="/public/profile-image@2x.png"
-							/>
-
-							<a
-								class="[text-decoration:none] relative font-bold min-w-[4.438rem]whitespace-nowrap"
-								>AR. Jakir</a
-							>
-						</div>
-						<img
-							class="h-[1.25rem] w-[1.25rem] relative my-auto"
-							alt=""
-							src="/public/vector-8.svg"
-						/>
-					</div>
-				</div>
+			<div class="flex justify-end gap-3 w-full">
+				<SearchBar />
+				<Account />
 			</div>
 		</div>
-	</div>
 </header>
