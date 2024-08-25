@@ -134,7 +134,7 @@
 				<div class="min-h-px"/>
 			</div>
 		</div>
-		
+
 		<div class="rounded-2xl bg-dark-3 flex py-5 pl-5 pr-7">
 			<div class="flex flex-col gap-3">
 				<div class="flex gap-1">

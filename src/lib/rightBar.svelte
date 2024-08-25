@@ -2,7 +2,7 @@
 </script>
 
 <div
-	class="w-[20.313rem] flex flex-col items-start justify-start gap-3 text-sm pr-1 hidden lg:flex"
+	class="w-[20.313rem] flex-col items-start justify-start gap-3 text-sm pr-1 hidden lg:flex"
 >
 	<div
 		class="self-stretch rounded-2xl bg-dark-3 flex flex-col items-start justify-start py-[1.25rem] pl-[1.25rem] pr-[0.625rem]"
