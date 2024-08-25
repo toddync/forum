@@ -5,7 +5,7 @@
 <div class="flex gap-2 cursor-pointer">
     <div class="rounded bg-dimgray-200 flex p-1.5">
         <img
-            class="size-5"
+            class="size-5 my-auto"
             src="/public/dev.svg"
             alt="tag icon"
         />

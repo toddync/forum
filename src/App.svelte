@@ -5,6 +5,8 @@
 	import MainArea from "./lib/mainArea.svelte";
 	import NavContainer from "./lib/navContainer.svelte";
 	import RightBar from "./lib/rightBar.svelte";
+
+	document.documentElement.classList.add("dark")
 </script>
 
 <svelte:head>
@@ -17,7 +19,9 @@
 	<main class="text-secondary-color-background-2 font-regular-10 px-2 gap-2 flex flex-wrap flex-col md:flex-row">
 		<LeftBar />
 		<MainArea />
-		<RightBar />
+		<!--
+			<RightBar />
+		-->
 		<div class="h-fit lg:hidden w-full pt-5">
 			<NavContainer />
 		</div>

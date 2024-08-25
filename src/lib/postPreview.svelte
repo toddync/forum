@@ -37,7 +37,7 @@
 						<p class="text-xs text-secondary-color-secondary-5">3 weeks ago</p>
 					</div>
 				</div>
-				<div class="md:absolute right-0 text-secondary-color-secondary-5 flex gap-3 *:text-nowrap">
+				<div class="md:absolute right-3 text-secondary-color-secondary-5 flex gap-3 *:text-nowrap">
 					<div>651,324 Views</div>
 					<div>36,6545 Likes</div>
 					<div>56 comments</div>
