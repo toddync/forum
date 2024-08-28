@@ -1,5 +1,5 @@
 import '../app.css'
-import About from './About.svelte'
+import About from './Login.svelte'
 
 const app = new About({
   target: document.body,

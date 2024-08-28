@@ -1,20 +1,26 @@
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import path, { resolve } from "path";
+import { resolve } from 'path';
 import { defineConfig } from 'vite';
 
+const root = resolve(__dirname, 'src')
+const outDir = resolve(__dirname, 'dist')
+
 export default defineConfig({
+    root,
     plugins: [svelte()],
-    resolve: {
-        alias: {
-            $lib: path.resolve("./src/lib"),
-        },
-    },
     build: {
+        outDir,
+        emptyOutDir: true,
         rollupOptions: {
             input: {
-                index: resolve(__dirname, 'index.html'),
-                about: resolve(__dirname, 'about/index.html'),
-            },
+                main: resolve(root, 'index.html'),
+                login: resolve(root, 'login', 'index.html'),
+            }
+        }
+    },
+    resolve: {
+        alias: {
+            $lib: resolve(root, "lib"),
         },
     },
 })

@@ -12,7 +12,7 @@
     </div>
 
     <div class="flex flex-col">
-        <div class="font-semibold">
+        <div class="font-semibold text-xs">
             #javascript
 
         </div>
